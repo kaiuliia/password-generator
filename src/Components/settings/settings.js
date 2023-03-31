@@ -1,6 +1,7 @@
 import React from "react";
 import {Strength} from "./strength";
 import {Slider} from "./slider";
+import {Flags} from "./flags";
 // import { useSelector } from "react-redux";
 
 
@@ -9,6 +10,7 @@ export const Settings = () => {
         <div className="settings-container">
             Settings
             <Slider />
+            <Flags />
             <Strength />
            </div>
     )
