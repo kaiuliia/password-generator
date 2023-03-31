@@ -14,10 +14,16 @@ const App = () => {
 
       </header>
         <div className="Form">
+            <div className="Output">
             <Output />
+            </div>
+            <br></br>
+            <div className="Settings">
             {<Settings/>}
+                </div>
+            <button className='button'>Generate</button>
         </div>
-        <button>Generate</button>
+
     </div>
   );
 }
