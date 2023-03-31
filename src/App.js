@@ -5,10 +5,16 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-         Password generator
+
+        <p>
+         Password Generator
+        </p>
+
       </header>
-
-
+        <div className="Output">
+            {/*<Output />*/}
+        </div>
+        <button>Generate</button>
     </div>
   );
 }
