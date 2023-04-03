@@ -1,28 +1,24 @@
 @font-face {
-  font-family: 'JetBrains Mono Bold';
-  src: url('assets/fonts/static/JetBrainsMono-Bold.ttf') format('ttf'),
-  url('assets/fonts/static/JetBrainsMono-BoldItalic.ttf') format('ttf'),
-  url('assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('ttf'),
-  url('assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('ttf')
+  font-family: "JetBrains Mono Bold";
+  src: url("assets/fonts/static/JetBrainsMono-Bold.ttf") format("ttf"),
+    url("assets/fonts/static/JetBrainsMono-BoldItalic.ttf") format("ttf"),
+    url("assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("ttf"),
+    url("assets/fonts/JetBrainsMono-VariableFont_wght.ttf") format("ttf");
   /*font-weight: 400;*/
   /*font-style: normal;*/
 }
 
 html {
-  background: #18171F;
-
-
+  background: #18171f;
 }
 .App {
-  font-family: 'JetBrains Mono';
-font-weight: bold;
+  font-family: "JetBrains Mono";
+  font-weight: bold;
   /*text-align: center;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-
 }
 
 .App-logo {
@@ -30,9 +26,7 @@ font-weight: bold;
   pointer-events: none;
 }
 
-
 .App-header {
-
   width: 260px;
   height: 32px;
   left: 590px;
@@ -40,7 +34,7 @@ font-weight: bold;
 
   /* Heading (M) */
 
-  font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -52,11 +46,9 @@ font-weight: bold;
   /* Grey */
 
   color: white;
-
 }
 
 .Form {
-
   display: flex;
 
   flex-direction: column;
@@ -67,91 +59,89 @@ font-weight: bold;
   left: 450px;
   top: 196px;
   background: blue;
-color:#E6E5EA;
+  color: #e6e5ea;
 
   /*background: #817D92;*/
   /*width:50%;*/
-
 }
 .Setting {
-
 }
 .Output {
   /*margin:2rem;*/
-  background: #24232C;
-  display:flex;
+  background: #24232c;
+  display: flex;
   justify-content: space-between;
-width:100%;
-height: 50px;
-
-
+  width: 100%;
+  height: 50px;
 }
 
 .left {
   display: flex;
   justify-content: flex-start;
-  width:80%;
+  width: 80%;
   padding-left: 1rem;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   align-items: center;
-
 }
 .left > p {
-  margin:0;
+  margin: 0;
 }
 .right {
   display: flex;
   justify-content: flex-end;
-align-items: center;
-  width:20%;
+  align-items: center;
+  width: 20%;
   padding-right: 1rem;
-  font-size:0.8rem;
+  font-size: 0.8rem;
 }
 
 img {
   height: fit-content;
-  width:20px;
+  width: 20px;
   padding-left: 1rem;
 }
-.settings-container{
-  background: #24232C;
-width:540px;
+.settings-container {
+  background: #24232c;
+  width: 540px;
 }
 
 .slider-container {
   background: green;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   /*width: 540px;*/
 }
-.slider-left{
+.slider-left {
   display: flex;
   justify-content: flex-start;
-  width:80%;
+  width: 80%;
   padding-left: 1rem;
-  font-size:0.8rem;
+  font-size: 0.8rem;
   align-items: center;
 }
-.slider-right{
+.slider-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width:20%;
+  width: 20%;
   padding-right: 1rem;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 
 .slider-bar {
-background: red;
-  height: 3px;
+  background: red;
+  height: 0.3rem;
+}
 
-
-
-
+.circle {
+  background: red;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
 }
 .button {
-  background: #A4FFAF;
-  height:20px;
-  font-family: 'JetBrains Mono';
+  background: #a4ffaf;
+  height: 20px;
+  font-family: "JetBrains Mono";
   font-weight: bold;
 }

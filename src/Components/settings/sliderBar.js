@@ -4,5 +4,10 @@ import "../../App.css";
 import logo from "../../assets/images/icon-copy.svg";
 
 export const SliderBar = () => {
-  return <div className="slider-bar"></div>;
+  return (
+    <div>
+      <div className="slider-bar"></div>
+      <div className="circle"></div>
+    </div>
+  );
 };
