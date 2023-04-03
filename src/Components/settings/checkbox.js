@@ -4,18 +4,25 @@ import "../../App.css";
 
 export const Checkbox = () => {
   return (
-    <ul>
-      <input type="checkbox" className="firstCheck" />
-      <span> Include Uppercase Letters</span>
+    <div className="checkboxContainer">
+      <label class="container">
+        <input type="checkbox" className="firstCheck" />
+        <span> Include Uppercase Letters</span>
+      </label>
 
-      <input type="checkbox" className="secondCheck" />
-      <span> Include Lowercase Letters</span>
+      <label className="container">
+        <input type="checkbox" className="secondCheck" />
+        <span> Include Lowercase Letters</span>
+      </label>
 
-      <input type="checkbox" className="thirdCheck" />
-      <span> Include Numbers</span>
-
-      <input type="checkbox" className="fourthCheck" />
-      <span> Include Symbols</span>
-    </ul>
+      <label className="container">
+        <input type="checkbox" className="thirdCheck" />
+        <span> Include Numbers</span>
+      </label>
+      <label className="container">
+        <input type="checkbox" className="fourthCheck" />
+        <span> Include Symbols</span>
+      </label>
+    </div>
   );
 };

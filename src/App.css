@@ -152,17 +152,12 @@ img {
   cursor: pointer;
 }
 
-/*.slider::-moz-range-track {*/
-/*  background: #a4ffaf;*/
-/*}*/
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
 
-/*.slider::-moz-range-thumb {*/
-/*  width: 25px;*/
-/*  height: 25px;*/
-/*  border-radius: 50%;*/
-/*  background: #a4ffaf;*/
-/*  cursor: pointer;*/
-/*}*/
+  padding-top: 1rem;
+}
 
 .button {
   background: #a4ffaf;
