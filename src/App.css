@@ -129,7 +129,7 @@ img {
 }
 
 .slider-bar {
-  width: 100%;
+  padding: 1rem;
 }
 .slider {
   -webkit-appearance: none;
@@ -155,8 +155,10 @@ img {
 .checkboxContainer {
   display: flex;
   flex-direction: column;
-
-  padding-top: 1rem;
+  padding: 1rem;
+}
+.container {
+  padding-top: 0.5rem;
 }
 
 .button {
