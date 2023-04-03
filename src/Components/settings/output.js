@@ -6,11 +6,11 @@ import logo from "../../assets/images/icon-copy.svg";
 export const Output = () => {
   return (
     <div className="Output">
-      <div className="Password">
+      <div className="left">
         <p>password is here</p>
       </div>
-      <div className="copy">
-        <p>copied</p>
+      <div className="right">
+        <p className="copiedWord">COPIED</p>
         <img src={logo} />
       </div>
     </div>
