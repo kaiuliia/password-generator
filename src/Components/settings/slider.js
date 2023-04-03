@@ -2,6 +2,7 @@ import React from "react";
 // import { useSelector } from "react-redux";
 import "../../App.css";
 import logo from "../../assets/images/icon-copy.svg";
+import { SliderBar } from "./sliderBar";
 
 export const Slider = () => {
   return (

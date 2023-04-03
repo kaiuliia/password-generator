@@ -140,6 +140,15 @@ width:540px;
   padding-right: 1rem;
   font-size:1.5rem;
 }
+
+.slider-bar {
+background: red;
+  height: 3px;
+
+
+
+
+}
 .button {
   background: #A4FFAF;
   height:20px;
