@@ -39,15 +39,17 @@ html {
 
   /* Grey */
 
-  color: #817D92;
+  color: white;
 
 }
 
-.App-link {
-  color: #61dafb;
-}
 .Form {
 
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   width: 540px;
   height: 632px;
   left: 450px;
@@ -59,8 +61,32 @@ color:#E6E5EA;
   /*width:50%;*/
 
 }
-.setting {
+.Setting {
 
+}
+.Output {
+  background: red;
+  display:flex;
+  justify-content: space-between;
+width:100%;
+height: 10%;
+
+
+
+}
+.Output>img{
+  float:right;
+ width:auto;
+  height:2rem;
+}
+.Output>Password {
+  width:50%;
+  float:left;
+}
+
+.Output>copy {
+  width:50%;
+  float:right;
 }
 .button {
   background: #A4FFAF;
