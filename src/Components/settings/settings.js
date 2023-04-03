@@ -8,8 +8,8 @@ import "../../App.css";
 export const Settings = () => {
   return (
     <div className="settings-container">
-      Settings
       <Slider />
+      ]
       <Flags />
       <Strength />
     </div>

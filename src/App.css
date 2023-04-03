@@ -66,7 +66,7 @@ font-weight: bold;
   height: 632px;
   left: 450px;
   top: 196px;
-  background: #24232C;
+  background: blue;
 color:#E6E5EA;
 
   /*background: #817D92;*/
@@ -78,7 +78,7 @@ color:#E6E5EA;
 }
 .Output {
   /*margin:2rem;*/
-  background: red;
+  background: #24232C;
   display:flex;
   justify-content: space-between;
 width:100%;
@@ -113,23 +113,36 @@ img {
   width:20px;
   padding-left: 1rem;
 }
-/*.Output>img{*/
-/*  float:right;*/
-/* !*width:auto;*!*/
-/*  height:2rem;*/
-/*}*/
-/*.Output > Password {*/
-/*  width:50%;*/
-/*  float:left;*/
-/*}*/
+.settings-container{
+  background: #24232C;
+width:540px;
+}
 
-/*.Output>copy {*/
-/*  display: flex;*/
-/*  width:50%;*/
-/*  float:right;*/
-/*}*/
+.slider-container {
+  background: green;
+  display:flex;
+  justify-content: space-between;
+  /*width: 540px;*/
+}
+.slider-left{
+  display: flex;
+  justify-content: flex-start;
+  width:80%;
+  padding-left: 1rem;
+  font-size:0.8rem;
+  align-items: center;
+}
+.slider-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width:20%;
+  padding-right: 1rem;
+  font-size:1.5rem;
+}
 .button {
   background: #A4FFAF;
   height:20px;
-
+  font-family: 'JetBrains Mono';
+  font-weight: bold;
 }
