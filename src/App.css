@@ -161,6 +161,11 @@ img {
   padding-top: 0.5rem;
 }
 
+.colorBlock {
+  width: 3px;
+  height: 6px;
+  background-color: yellow;
+}
 .button {
   background: #a4ffaf;
   height: 20px;
