@@ -11,9 +11,12 @@ export const Strength = () => {
       </div>
       <div className="rightStrength">
         <p className="copiedWord">MEDIUM</p>
-        <div className="colorBlock"></div>
-        <div className="colorBlock"></div>
-        <div className="colorBlock"></div>
+        <div className="coloredContainers">
+          <div className="colorBlock"></div>
+          <div className="colorBlock"></div>
+          <div className="colorBlock"></div>
+          <div className="colorBlock"></div>
+        </div>
       </div>
     </div>
   );
