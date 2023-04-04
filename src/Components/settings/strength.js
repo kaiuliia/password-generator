@@ -6,11 +6,13 @@ import logo from "../../assets/images/icon-copy.svg";
 export const Strength = () => {
   return (
     <div className="strength-container">
-      <div className="left">
-        <p>password is here</p>
+      <div className="leftStrength">
+        <p>STRENGTH</p>
       </div>
-      <div className="right">
+      <div className="rightStrength">
         <p className="copiedWord">MEDIUM</p>
+        <div className="colorBlock"></div>
+        <div className="colorBlock"></div>
         <div className="colorBlock"></div>
       </div>
     </div>
