@@ -7,21 +7,21 @@ export const Checkbox = () => {
     <div className="checkboxContainer">
       <label class="container">
         <input type="checkbox" className="firstCheck" />
-        <span> Include Uppercase Letters</span>
+        <span>Include Uppercase Letters</span>
       </label>
 
       <label className="container">
         <input type="checkbox" className="secondCheck" />
-        <span> Include Lowercase Letters</span>
+        <span>Include Lowercase Letters</span>
       </label>
 
       <label className="container">
         <input type="checkbox" className="thirdCheck" />
-        <span> Include Numbers</span>
+        <span>Include Numbers</span>
       </label>
       <label className="container">
         <input type="checkbox" className="fourthCheck" />
-        <span> Include Symbols</span>
+        <span>Include Symbols</span>
       </label>
     </div>
   );
