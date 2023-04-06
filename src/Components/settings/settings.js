@@ -13,6 +13,9 @@ export const Settings = () => {
       <SliderBar />
       <Checkbox />
       <Strength />
+      <div className="buttonContainer">
+        <button className="button">GENERATE →</button>
+      </div>
     </div>
   );
 };
