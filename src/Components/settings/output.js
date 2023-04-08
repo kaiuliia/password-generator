@@ -7,7 +7,7 @@ export const Output = () => {
   return (
     <div className="Output">
       <div className="left">
-        <p>password is here</p>
+        <p>password</p>
       </div>
       <div className="right">
         <p className="copiedWord">COPIED</p>
