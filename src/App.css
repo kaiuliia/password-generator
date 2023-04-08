@@ -309,26 +309,14 @@ img {
     padding: 0 16px 0 16px;
   }
 
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #e6e5ea;
-    cursor: pointer;
-  }
-
   .checkboxContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 0 32px 0 32px;
-    font-size: 18px;
-    margin-top: 32px;
+    padding: 0 16px 0 16px;
+    font-size: 16px;
+    margin-top: 16px;
   }
 
   .checkboxContainer label {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     margin-left: 0;
   }
 
@@ -336,14 +324,11 @@ img {
     accent-color: #a4ffaf;
     width: 20px;
     height: 20px;
-    margin-right: 24px;
+    margin-right: 20px;
     vertical-align: bottom;
     position: relative;
   }
 
-  .container {
-    /*padding-top: 0.5rem;*/
-  }
   .strength-container {
     display: flex;
     justify-content: space-between;
