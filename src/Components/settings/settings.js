@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { generatePassword } from "./settingSlice";
 
 export const Settings = () => {
+  const dispatch = useDispatch();
   const generatePasswordHandler = () => {
     dispatch(generatePassword());
   };
