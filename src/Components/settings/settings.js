@@ -4,9 +4,14 @@ import { Slider } from "./slider";
 import { Checkbox } from "./checkbox";
 import "../../App.css";
 import { SliderBar } from "./sliderBar";
-// import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { generatePassword } from "./settingSlice";
 
 export const Settings = () => {
+  const generatePasswordHandler = () => {
+    dispatch(generatePassword());
+  };
+
   return (
     <div className="settings-container">
       <Slider />
@@ -14,7 +19,9 @@ export const Settings = () => {
       <Checkbox />
       <Strength />
       <div className="buttonContainer">
-        <button className="button">GENERATE →</button>
+        <button className="button" onClick={generatePasswordHandler}>
+          GENERATE →
+        </button>
       </div>
     </div>
   );
