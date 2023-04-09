@@ -1,9 +1,9 @@
 import { combineReducers, createStore } from "redux";
 
-// import { boardReducer } from "../features/board/boardSlice.js";
+import { passwordReducer } from "../Components/settings/settingSlice";
 
 const rootReducer = combineReducers({
-  // board: boardReducer,
+  pass: passwordReducer,
 });
 
 export const store = createStore(rootReducer);

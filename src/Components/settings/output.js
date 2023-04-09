@@ -1,13 +1,13 @@
 import React from "react";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "../../App.css";
 import logo from "../../assets/images/icon-copy.svg";
 
-export const Output = () => {
+export const Output = ({ text }) => {
   return (
     <div className="Output">
       <div className="left">
-        <p>password</p>
+        <p>{text}</p>
       </div>
       <div className="right">
         <p className="copiedWord">COPIED</p>
