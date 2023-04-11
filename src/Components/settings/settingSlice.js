@@ -1,11 +1,15 @@
 const passwordState = "fghjkk";
-
+const letters = "ABCDEFGHIJKLMN";
 //reducer
 
 export const passwordReducer = (state = passwordState, action) => {
+  let newPass = [];
+  for (let i = 0; i <= 7; i++) {
+    newPass.push(letters[Math.floor(Math.random() * letters.length)]);
+  }
   switch (action.type) {
     case "passw/setPassword":
-      return "blabla";
+      return (state = newPass);
   }
 
   return state;
