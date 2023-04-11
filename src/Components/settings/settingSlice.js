@@ -3,13 +3,18 @@ const passwordState = "fghjkk";
 //reducer
 
 export const passwordReducer = (state = passwordState, action) => {
-  state = "hhjj";
+  switch (action.type) {
+    case "passw/setPassword":
+      return "blabla";
+  }
+
+  return state;
 };
 
 // action creators
 export const generatePassword = () => {
   return {
-    type: "password/setPassword",
+    type: "passw/setPassword",
     payload: passwordState,
   };
 };

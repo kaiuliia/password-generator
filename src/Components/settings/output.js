@@ -4,10 +4,13 @@ import "../../App.css";
 import logo from "../../assets/images/icon-copy.svg";
 
 export const Output = ({ text }) => {
+  const password = useSelector((state) => {
+    return state.passw;
+  });
   return (
     <div className="Output">
       <div className="left">
-        <p>{text}</p>
+        <p>{password}</p>
       </div>
       <div className="right">
         <p className="copiedWord">COPIED</p>
