@@ -1,4 +1,11 @@
 const passwordState = "fghjkk";
+const keys = {
+  upperCaseLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowerCase: "abcdefghijklmnopqrstuvwxyz",
+  number: "0123456789",
+  symbol: "@#$%^&*()_+~|}{[]></-=",
+};
+
 const letters = "ABCDEFGHIJKLMN";
 //reducer
 
