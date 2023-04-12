@@ -1,7 +1,7 @@
 const passwordState = {
-  password: "your password",
+  password: "default",
   incUpper: "false",
-  incLow: "false",
+  incLow: "true",
   incSymb: "false",
   incNum: "false",
   length: 10,
@@ -13,6 +13,7 @@ const keys = {
   symbol: "@#$%^&*()_+~|}{[]></-=",
 };
 
+const letters = "ABCDEFGHIJKLMN";
 //reducer
 
 const createPassword = () => {
@@ -28,24 +29,11 @@ const createPassword = () => {
   return newPass;
 };
 
-const addLower = () => {
-  let newPass = [];
-  newPass.push(
-    keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)]
-  );
-  return newPass;
-};
-export const passwordReducer = (state = passwordState, action) => {
-  // createPassword();
-
+export const passwordReducer = (state = passwordState.password, action) => {
+  createPassword();
   switch (action.type) {
     case "passw/setPassword":
-      return (state.password = createPassword());
-
-    case "lowCase/setLowCase":
-      return {
-        ...state((state.password = addLower())),
-      };
+      return (state = createPassword());
   }
 
   return state;
@@ -61,7 +49,7 @@ export const generatePassword = () => {
 
 export const lowCaseChecked = () => {
   return {
-    type: "lowCase/setLowCase",
-    payload: passwordState,
+    type: "passw/setPassword",
+    payload: keys.lowerCase,
   };
 };
