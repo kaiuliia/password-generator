@@ -1,4 +1,11 @@
-const passwordState = "fghjkk";
+const passwordState = {
+  password: "default",
+  incUpper: "false",
+  incLow: "true",
+  incSymb: "false",
+  incNum: "false",
+  length: 10,
+};
 const keys = {
   upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   lowerCase: "abcdefghijklmnopqrstuvwxyz",
@@ -14,14 +21,15 @@ const createPassword = () => {
   for (let i = 0; i <= 3; i++) {
     newPass.push(
       keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)] +
-        // keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)] +
-        keys.number[Math.floor(Math.random() * keys.number.length)]
+        keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)] +
+        keys.number[Math.floor(Math.random() * keys.number.length)] +
+        keys.symbol[Math.floor(Math.random() * keys.symbol.length)]
     );
   }
   return newPass;
 };
 
-export const passwordReducer = (state = passwordState, action) => {
+export const passwordReducer = (state = passwordState.password, action) => {
   createPassword();
   switch (action.type) {
     case "passw/setPassword":
