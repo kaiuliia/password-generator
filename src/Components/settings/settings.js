@@ -8,10 +8,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { generatePassword } from "./settingSlice";
 
 export const Settings = () => {
+  const checkedLow = useSelector(selectVisibleIds);
   const dispatch = useDispatch();
   const generatePasswordHandler = () => {
     dispatch(generatePassword());
   };
+
+  const checkHandlier = () => {};
 
   return (
     <div className="settings-container">
