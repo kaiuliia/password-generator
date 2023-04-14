@@ -13,7 +13,6 @@ const keys = {
   symbol: "@#$%^&*()_+~|}{[]></-=",
 };
 
-const letters = "ABCDEFGHIJKLMN";
 //reducer
 
 const createPassword = () => {
@@ -47,9 +46,9 @@ export const generatePassword = () => {
   };
 };
 
-export const lowCaseChecked = () => {
-  return {
-    type: "passw/setPassword",
-    payload: keys.lowerCase,
-  };
-};
+// export const lowCaseChecked = () => {
+//   return {
+//     type: "passw/setPassword",
+//     payload: keys.lowerCase,
+//   };
+// };
