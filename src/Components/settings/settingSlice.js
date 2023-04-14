@@ -46,9 +46,9 @@ export const generatePassword = () => {
   };
 };
 
-// export const lowCaseChecked = () => {
-//   return {
-//     type: "passw/setPassword",
-//     payload: keys.lowerCase,
-//   };
-// };
+export const lowCaseChecked = () => {
+  return {
+    type: "passw/setPassword",
+    payload: keys.lowerCase,
+  };
+};

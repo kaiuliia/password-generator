@@ -3,14 +3,14 @@ import React from "react";
 import "../../App.css";
 import { useDispatch, useSelector } from "react-redux";
 
-// import { lowCaseChecked } from "./settingSlice";
+import { lowCaseChecked } from "./settingSlice";
 export const Checkbox = () => {
-  // const lowCheck = useSelector((state) => state.passw.incLow);
+  const lowCheck = useSelector((state) => state.passw.incLow);
 
   const dispatch = useDispatch();
-  // const checkHandlier = () => {
-  //   dispatch(lowCaseChecked());
-  // };
+  const checkHandlier = () => {
+    dispatch(lowCaseChecked());
+  };
 
   return (
     <div className="checkboxContainer">
@@ -23,7 +23,7 @@ export const Checkbox = () => {
         <input
           type="checkbox"
           checked={false}
-          // onChange={checkHandlier}
+          onChange={checkHandlier}
           className="secondCheck"
         />
         <span>Include Lowercase Letters</span>
