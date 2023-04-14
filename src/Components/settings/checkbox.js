@@ -3,15 +3,18 @@ import React from "react";
 import "../../App.css";
 import { useDispatch, useSelector } from "react-redux";
 
-import { lowCaseChecked } from "./settingSlice";
+import { lowCaseChecked, numCaseChecked } from "./settingSlice";
 export const Checkbox = () => {
-  const lowCheck = useSelector((state) => state.passw.incLow);
-
   const dispatch = useDispatch();
+  const lowCheck = useSelector((state) => state.passw.incLow);
+  const numCheck = useSelector((state) => state.passw.incNum);
+
   const checkHandlier = () => {
     dispatch(lowCaseChecked());
   };
-
+  const checkNumHandlier = () => {
+    dispatch(numCaseChecked());
+  };
   return (
     <div className="checkboxContainer">
       <label class="container">
@@ -22,7 +25,7 @@ export const Checkbox = () => {
       <label className="container">
         <input
           type="checkbox"
-          checked={false}
+          checked={lowCheck}
           onChange={checkHandlier}
           className="secondCheck"
         />
@@ -30,9 +33,15 @@ export const Checkbox = () => {
       </label>
 
       <label className="container">
-        <input type="checkbox" className="thirdCheck" />
+        <input
+          type="checkbox"
+          checked={numCheck}
+          onChange={checkNumHandlier}
+          className="thirdCheck"
+        />
         <span>Include Numbers</span>
       </label>
+
       <label className="container">
         <input type="checkbox" className="fourthCheck" />
         <span>Include Symbols</span>

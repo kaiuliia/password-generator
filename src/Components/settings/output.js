@@ -5,7 +5,7 @@ import logo from "../../assets/images/icon-copy.svg";
 
 export const Output = ({ text }) => {
   const password = useSelector((state) => {
-    return state.passw;
+    return state.passw.password;
   });
   return (
     <div className="Output">
