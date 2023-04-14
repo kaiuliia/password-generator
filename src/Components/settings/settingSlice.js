@@ -1,9 +1,9 @@
 const passwordState = {
   password: "default",
-  incUpper: "false",
-  incLow: "true",
-  incSymb: "false",
-  incNum: "false",
+  incUpper: false,
+  incLow: false,
+  incSymb: false,
+  incNum: false,
   length: 10,
 };
 const keys = {
@@ -28,14 +28,16 @@ const createPassword = () => {
   return newPass;
 };
 
-export const passwordReducer = (state = passwordState.password, action) => {
-  createPassword();
+export const passwordReducer = (state = passwordState, action) => {
   switch (action.type) {
     case "passw/setPassword":
-      return (state = createPassword());
+      return createPassword();
+
+    case "passw/lowCaseChecked":
+    // return state.map=>(...state, incLow: true)
   }
 
-  return state;
+  return state.password;
 };
 
 // action creators
@@ -46,9 +48,9 @@ export const generatePassword = () => {
   };
 };
 
-export const lowCaseChecked = () => {
+export const lowCaseChecked = (checked) => {
   return {
-    type: "passw/setPassword",
-    payload: keys.lowerCase,
+    type: "passw/lowCaseChecked",
+    payload: checked,
   };
 };
