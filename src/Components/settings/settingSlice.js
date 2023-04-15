@@ -59,6 +59,13 @@ export const passwordReducer = (state = passwordState, action) => {
       } else {
         return { ...state, incNum: false };
       }
+
+    case "passw/upCaseChecked":
+      if (state.incUpper === false) {
+        return { ...state, incUpper: true };
+      } else {
+        return { ...state, incUpper: false };
+      }
   }
 
   return state;
@@ -82,6 +89,13 @@ export const lowCaseChecked = (checked) => {
 export const numCaseChecked = (checked) => {
   return {
     type: "passw/numCaseChecked",
+    payload: checked,
+  };
+};
+
+export const upCaseChecked = (checked) => {
+  return {
+    type: "passw/upCaseChecked",
     payload: checked,
   };
 };
