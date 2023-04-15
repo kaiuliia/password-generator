@@ -54,7 +54,11 @@ export const passwordReducer = (state = passwordState, action) => {
       }
 
     case "passw/numCaseChecked":
-      return { ...state, incNum: true };
+      if (state.incNum === false) {
+        return { ...state, incNum: true };
+      } else {
+        return { ...state, incNum: false };
+      }
   }
 
   return state;
