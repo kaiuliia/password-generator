@@ -66,6 +66,13 @@ export const passwordReducer = (state = passwordState, action) => {
       } else {
         return { ...state, incUpper: false };
       }
+
+    case "passw/symbolCaseChecked":
+      if (state.incSymb === false) {
+        return { ...state, incSymb: true };
+      } else {
+        return { ...state, incSymb: false };
+      }
   }
 
   return state;
