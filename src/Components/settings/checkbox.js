@@ -14,7 +14,7 @@ export const Checkbox = () => {
   const lowCheck = useSelector((state) => state.passw.incLow);
   const numCheck = useSelector((state) => state.passw.incNum);
   const upCheck = useSelector((state) => state.passw.incUpper);
-  const symbCheck = useSelector((state) => state.passw.incNum);
+  const symbCheck = useSelector((state) => state.passw.incSymb);
   const checkHandlier = () => {
     dispatch(lowCaseChecked());
   };
@@ -63,7 +63,12 @@ export const Checkbox = () => {
       </label>
 
       <label className="container">
-        <input type="checkbox" className="fourthCheck" />
+        <input
+          type="checkbox"
+          checked={symbCheck}
+          onChange={checkSymbHandlier}
+          className="fourthCheck"
+        />
         <span>Include Symbols</span>
       </label>
     </div>
