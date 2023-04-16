@@ -3,12 +3,18 @@ import React from "react";
 import "../../App.css";
 import { useDispatch, useSelector } from "react-redux";
 
-import { lowCaseChecked, numCaseChecked, upCaseChecked } from "./settingSlice";
+import {
+  lowCaseChecked,
+  numCaseChecked,
+  upCaseChecked,
+  symbolCaseChecked,
+} from "./settingSlice";
 export const Checkbox = () => {
   const dispatch = useDispatch();
   const lowCheck = useSelector((state) => state.passw.incLow);
   const numCheck = useSelector((state) => state.passw.incNum);
   const upCheck = useSelector((state) => state.passw.incUpper);
+  const symbCheck = useSelector((state) => state.passw.incNum);
   const checkHandlier = () => {
     dispatch(lowCaseChecked());
   };
@@ -18,6 +24,10 @@ export const Checkbox = () => {
 
   const checkUppHandlier = () => {
     dispatch(upCaseChecked());
+  };
+
+  const checkSymbHandlier = () => {
+    dispatch(symbolCaseChecked());
   };
 
   return (
