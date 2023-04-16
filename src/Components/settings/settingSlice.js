@@ -15,7 +15,7 @@ const keys = {
 
 //reducer
 
-const createPassword = (incLow, incNum) => {
+const createPassword = (incLow, incUpper, incSymb, incNum) => {
   let newPass = [];
   if (incLow === true) {
     for (let i = 0; i <= 3; i++) {
