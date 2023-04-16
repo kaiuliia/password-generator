@@ -99,3 +99,9 @@ export const upCaseChecked = (checked) => {
     payload: checked,
   };
 };
+export const symbolCaseChecked = (checked) => {
+  return {
+    type: "passw/symbolCaseChecked",
+    payload: checked,
+  };
+};
