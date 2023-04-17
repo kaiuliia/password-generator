@@ -81,6 +81,9 @@ export const passwordReducer = (state = passwordState, action) => {
       } else {
         return { ...state, incSymb: false };
       }
+
+    case "passw/changeLength":
+      return { ...state, length: action.payload };
   }
 
   return state;
