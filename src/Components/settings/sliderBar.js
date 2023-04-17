@@ -24,7 +24,7 @@ export const SliderBar = () => {
       <div className="slider-bar">
         <input
           type="range"
-          min="1"
+          min="4"
           max="10"
           value={value}
           className="slider"

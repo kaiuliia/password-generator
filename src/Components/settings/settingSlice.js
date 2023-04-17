@@ -19,6 +19,7 @@ const keys = {
 
 const createPassword = (incLow, incNum, incUpper, incSymb, length) => {
   let newPass = [];
+  let finalPass = [];
 
   while (newPass.length < length) {
     if (incLow === true) {
@@ -41,7 +42,10 @@ const createPassword = (incLow, incNum, incUpper, incSymb, length) => {
       newPass.push(keys.symbol[Math.floor(Math.random() * keys.symbol.length)]);
     }
   }
-  return newPass;
+  for (let i = 0; i < length; i++) {
+    finalPass.push(newPass[Math.floor(Math.random() * newPass.length)]);
+  }
+  return finalPass;
 };
 
 export const passwordReducer = (state = passwordState, action) => {
