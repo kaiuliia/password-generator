@@ -15,7 +15,7 @@ export const Checkbox = () => {
   const numCheck = useSelector((state) => state.passw.incNum);
   const upCheck = useSelector((state) => state.passw.incUpper);
   const symbCheck = useSelector((state) => state.passw.incSymb);
-  const checkHandlier = () => {
+  const checkLowHandlier = () => {
     dispatch(lowCaseChecked());
   };
   const checkNumHandlier = () => {
@@ -46,7 +46,7 @@ export const Checkbox = () => {
         <input
           type="checkbox"
           checked={lowCheck}
-          onChange={checkHandlier}
+          onChange={checkLowHandlier}
           className="secondCheck"
         />
         <span>Include Lowercase Letters</span>

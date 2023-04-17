@@ -15,36 +15,41 @@ const keys = {
 
 //reducer
 
-const createPassword = (incLow, incUpper, incSymb, incNum) => {
+const createPassword = (incLow, incNum, incUpper, incSymb) => {
   let newPass = [];
-  for (let i = 0; i <= 3; i++)
+  for (let i = 0; i <= 3; i++) {
     if (incLow === true) {
       newPass.push(
         keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)]
       );
     }
 
-  if (incUpper === true) {
-    newPass.push(
-      keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)]
-    );
-  }
+    if (incUpper === true) {
+      newPass.push(
+        keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)]
+      );
+    }
 
-  if (incNum === true) {
-    newPass.push(keys.number[Math.floor(Math.random() * keys.number.length)]);
-  }
+    if (incNum === true) {
+      newPass.push(keys.number[Math.floor(Math.random() * keys.number.length)]);
+    }
 
-  if (incSymb === true) {
-    newPass.push(keys.symbol[Math.floor(Math.random() * keys.symbol.length)]);
+    if (incSymb === true) {
+      newPass.push(keys.symbol[Math.floor(Math.random() * keys.symbol.length)]);
+    }
   }
-
   return newPass;
 };
 
 export const passwordReducer = (state = passwordState, action) => {
   switch (action.type) {
     case "passw/setPassword":
-      const newPassword = createPassword(state.incLow, state.incNum);
+      const newPassword = createPassword(
+        state.incLow,
+        state.incNum,
+        state.incUpper,
+        state.incSymb
+      );
       return { ...state, password: newPassword };
 
     case "passw/lowCaseChecked":
