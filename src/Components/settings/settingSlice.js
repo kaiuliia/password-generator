@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const passwordState = {
   password: "default",
   incUpper: false,
@@ -84,7 +86,13 @@ export const passwordReducer = (state = passwordState, action) => {
   return state;
 };
 
-export const sliderChange = (state = passwordState.length) => {};
+export const sliderChange = (state = passwordState.length) => {
+  // useEffect(() => {
+  //   let getPercentage = (deposit * 100) / propertyValue;
+  //   setInterestRepayment((getPercentage = getPercentage || 0));
+  // }, [deposit, propertyValue]);
+};
+
 // action creators
 export const generatePassword = () => {
   return {
