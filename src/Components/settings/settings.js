@@ -1,6 +1,6 @@
 import React from "react";
 import { Strength } from "./strength";
-import { Slider } from "./slider";
+
 import { Checkbox } from "./checkbox";
 import "../../App.css";
 import { SliderBar } from "./sliderBar";
@@ -18,7 +18,6 @@ export const Settings = () => {
 
   return (
     <div className="settings-container">
-      <Slider />
       <SliderBar />
       <Checkbox />
       <Strength />

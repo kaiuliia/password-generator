@@ -12,16 +12,26 @@ export const SliderBar = () => {
   };
 
   return (
-    <div className="slider-bar">
-      <input
-        type="range"
-        min="1"
-        max="10"
-        value={value}
-        className="slider"
-        id="myRange"
-        onChange={changeSlider}
-      />
+    <div>
+      <div className="slider-container">
+        <div className="slider-left">
+          <p>Character length</p>
+        </div>
+        <div className="slider-right">
+          <p className="passwordLength">10</p>
+        </div>
+      </div>
+      <div className="slider-bar">
+        <input
+          type="range"
+          min="1"
+          max="10"
+          value={value}
+          className="slider"
+          id="myRange"
+          onChange={changeSlider}
+        />
+      </div>
     </div>
   );
 };
