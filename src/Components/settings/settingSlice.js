@@ -17,9 +17,10 @@ const keys = {
 
 //reducer
 
-const createPassword = (incLow, incNum, incUpper, incSymb) => {
+const createPassword = (incLow, incNum, incUpper, incSymb, length) => {
   let newPass = [];
-  for (let i = 0; i < passwordState.length; i++) {
+
+  while (newPass.length < length) {
     if (incLow === true) {
       newPass.push(
         keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)]
@@ -50,7 +51,8 @@ export const passwordReducer = (state = passwordState, action) => {
         state.incLow,
         state.incNum,
         state.incUpper,
-        state.incSymb
+        state.incSymb,
+        state.length
       );
       return { ...state, password: newPassword };
 
