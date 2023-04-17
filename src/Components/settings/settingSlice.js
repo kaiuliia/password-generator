@@ -17,26 +17,25 @@ const keys = {
 
 const createPassword = (incLow, incUpper, incSymb, incNum) => {
   let newPass = [];
-  if (incLow === true) {
-    for (let i = 0; i <= 3; i++) {
+
+  switch (passwordState.key) {
+    case incLow === true:
       newPass.push(
         keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)]
       );
-    }
-  } else if (incNum === true) {
-    for (let i = 0; i <= 3; i++) {
-      newPass.push(keys.number[Math.floor(Math.random() * keys.number.length)]);
-    }
-  } else {
-    for (let i = 0; i <= 3; i++) {
+
+    case incUpper === true:
       newPass.push(
-        keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)] +
-          keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)] +
-          keys.number[Math.floor(Math.random() * keys.number.length)] +
-          keys.symbol[Math.floor(Math.random() * keys.symbol.length)]
+        keys.upperCase[Math.floor(Math.random() * keys.upperCase.length)]
       );
-    }
+
+    case incNum === true:
+      newPass.push(keys.number[Math.floor(Math.random() * keys.number.length)]);
+
+    case incSymb === true:
+      newPass.push(keys.symbol[Math.floor(Math.random() * keys.symbol.length)]);
   }
+
   return newPass;
 };
 
