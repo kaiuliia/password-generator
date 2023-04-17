@@ -19,7 +19,7 @@ const keys = {
 
 const createPassword = (incLow, incNum, incUpper, incSymb) => {
   let newPass = [];
-  for (let i = 0; i <= 3; i++) {
+  for (let i = 0; i < passwordState.length; i++) {
     if (incLow === true) {
       newPass.push(
         keys.lowerCase[Math.floor(Math.random() * keys.lowerCase.length)]

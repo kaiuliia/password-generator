@@ -18,7 +18,7 @@ export const SliderBar = () => {
           <p>Character length</p>
         </div>
         <div className="slider-right">
-          <p className="passwordLength">10</p>
+          <p className="passwordLength">{value}</p>
         </div>
       </div>
       <div className="slider-bar">
