@@ -84,6 +84,7 @@ export const passwordReducer = (state = passwordState, action) => {
   return state;
 };
 
+export const sliderChange = (state = passwordState.length) => {};
 // action creators
 export const generatePassword = () => {
   return {
