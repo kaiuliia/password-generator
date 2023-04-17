@@ -7,8 +7,8 @@ export const SliderBar = () => {
   // const [value, changeValue] = useState(10);
   const value = useSelector((state) => state.passw.length);
   const dispatch = useDispatch();
-  const changeSlider = () => {
-    dispatch(sliderChange());
+  const changeSlider = (event) => {
+    dispatch(sliderChange(event.target.value));
   };
 
   return (

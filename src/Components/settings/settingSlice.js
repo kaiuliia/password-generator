@@ -86,11 +86,11 @@ export const passwordReducer = (state = passwordState, action) => {
   return state;
 };
 
-export const sliderChange = (state = passwordState.length) => {
-  // useEffect(() => {
-  //   let getPercentage = (deposit * 100) / propertyValue;
-  //   setInterestRepayment((getPercentage = getPercentage || 0));
-  // }, [deposit, propertyValue]);
+export const sliderChange = (value) => {
+  return {
+    type: "passw/changeLength",
+    payload: value,
+  };
 };
 
 // action creators
