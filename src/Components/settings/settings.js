@@ -8,13 +8,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { generatePassword } from "./settingSlice";
 
 export const Settings = () => {
-  const checkedLow = useSelector((state) => state.passw.incLow);
   const dispatch = useDispatch();
   const generatePasswordHandler = () => {
     dispatch(generatePassword());
   };
-
-  const checkHandlier = () => {};
 
   return (
     <div className="settings-container">

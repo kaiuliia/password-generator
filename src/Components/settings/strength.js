@@ -12,7 +12,7 @@ export const Strength = () => {
       <div className="rightStrength">
         <p className="copiedWord">MEDIUM</p>
         <div className="coloredContainers">
-          <div className="colorBlock"></div>
+          <div className="colorBlock" style={{ backgroundColor: "red" }}></div>
           <div className="colorBlock"></div>
           <div className="colorBlock"></div>
           <div className="colorBlock"></div>

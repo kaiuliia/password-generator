@@ -7,7 +7,9 @@ const passwordState = {
   incSymb: false,
   incNum: false,
   length: 10,
+  strength: "LOW",
 };
+
 const keys = {
   upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   lowerCase: "abcdefghijklmnopqrstuvwxyz",
@@ -93,6 +95,12 @@ export const passwordReducer = (state = passwordState, action) => {
   }
 
   return state;
+};
+
+export const changeColor = (state = passwordState) => {
+  if (state.length > 15) {
+    return { ...state, strength: "MEDIUM" };
+  }
 };
 
 export const sliderChange = (value) => {
