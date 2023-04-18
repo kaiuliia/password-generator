@@ -19,7 +19,14 @@ const keys = {
 
 //reducer
 
-const createPassword = (incLow, incNum, incUpper, incSymb, length) => {
+const createPassword = (
+  incLow,
+  incNum,
+  incUpper,
+  incSymb,
+  length,
+  strength
+) => {
   let newPass = [];
   let finalPass = [];
 
@@ -47,6 +54,7 @@ const createPassword = (incLow, incNum, incUpper, incSymb, length) => {
   for (let i = 0; i < length; i++) {
     finalPass.push(newPass[Math.floor(Math.random() * newPass.length)]);
   }
+
   return finalPass;
 };
 
@@ -58,7 +66,8 @@ export const passwordReducer = (state = passwordState, action) => {
         state.incNum,
         state.incUpper,
         state.incSymb,
-        state.length
+        state.length,
+        state.strength
       );
       return { ...state, password: newPassword };
 
@@ -92,6 +101,9 @@ export const passwordReducer = (state = passwordState, action) => {
 
     case "passw/changeLength":
       return { ...state, length: action.payload };
+      if (state.length > 15) {
+        return { ...state, strength: "MEDIUM" };
+      }
   }
 
   return state;
@@ -100,6 +112,10 @@ export const passwordReducer = (state = passwordState, action) => {
 export const changeColor = (state = passwordState) => {
   if (state.length > 15) {
     return { ...state, strength: "MEDIUM" };
+  }
+
+  if (state.length > 25) {
+    return { ...state, strength: "HARD" };
   }
 };
 
