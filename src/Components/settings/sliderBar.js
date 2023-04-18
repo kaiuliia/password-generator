@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { lowCaseChecked, sliderChange } from "./settingSlice";
 
 export const SliderBar = () => {
-  // const [value, changeValue] = useState(10);
   const value = useSelector((state) => state.passw.length);
   const dispatch = useDispatch();
   const changeSlider = (event) => {
