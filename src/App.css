@@ -57,15 +57,19 @@ html {
 .left {
   display: flex;
   justify-content: flex-start;
-  width: 80%;
+  width: 65%;
   padding-left: 32px;
   margin-top: 19px;
   margin-bottom: 19px;
   font-size: 32px;
   align-items: center;
 }
+
 .left > p {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .right {
   display: flex;
