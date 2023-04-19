@@ -100,7 +100,8 @@ export const passwordReducer = (state = passwordState, action) => {
       }
 
     case "passw/changeLength":
-      const stNumber = action.payload > 15 ? "MEDIUM" : "LOW";
+      const stNumber = changeColor(state);
+      // const stNumber = action.payload > 15 ? "MEDIUM" : "LOW";
       return { ...state, length: action.payload, strength: stNumber };
   }
 
@@ -108,13 +109,16 @@ export const passwordReducer = (state = passwordState, action) => {
 };
 
 export const changeColor = (state = passwordState) => {
+  let strWord = "LOW";
+
   if (state.length > 15) {
-    return { ...state, strength: "MEDIUM" };
+    strWord = "MEDIUM";
+  }
+  if (state.length > 35) {
+    strWord = "HARD";
   }
 
-  if (state.length > 25) {
-    return { ...state, strength: "HARD" };
-  }
+  return strWord;
 };
 
 export const sliderChange = (value) => {
