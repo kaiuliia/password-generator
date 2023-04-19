@@ -7,7 +7,8 @@ const passwordState = {
   incSymb: false,
   incNum: false,
   length: 10,
-  strength: "LOW",
+
+  strength: "",
 };
 
 const keys = {
@@ -109,12 +110,20 @@ export const passwordReducer = (state = passwordState, action) => {
 };
 
 export const changeColor = (state = passwordState) => {
-  let strWord = "LOW";
+  let strWord = "";
+
+  if (state.length > 12) {
+    strWord = "TO WEAK!";
+  }
 
   if (state.length > 15) {
+    strWord = "WEAK";
+  }
+
+  if (state.length > 25) {
     strWord = "MEDIUM";
   }
-  if (state.length > 35) {
+  if (state.length > 50) {
     strWord = "HARD";
   }
 
