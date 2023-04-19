@@ -100,10 +100,8 @@ export const passwordReducer = (state = passwordState, action) => {
       }
 
     case "passw/changeLength":
-      return { ...state, length: action.payload };
-      if (state.length > 15) {
-        return { ...state, strength: "MEDIUM" };
-      }
+      const stNumber = action.payload > 15 ? "MEDIUM" : "LOW";
+      return { ...state, length: action.payload, strength: stNumber };
   }
 
   return state;
