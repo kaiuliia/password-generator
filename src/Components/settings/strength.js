@@ -5,35 +5,31 @@ import logo from "../../assets/images/icon-copy.svg";
 
 export const Strength = () => {
   const strength = useSelector((state) => state.passw.strength);
-  let colorOne = "gray";
-  let colorTwo = "gray";
-  let colorThree = "gray";
-  let colorFour = "gray";
+  let colorOne,
+    colorTwo,
+    colorThree,
+    colorFour = "gray";
+
+  if (strength === "") {
+    colorOne = colorTwo = colorThree = colorFour = "grey";
+  }
 
   if (strength === "TO WEAK!") {
-    colorOne = "red";
-    colorTwo = "gray";
-    colorThree = "gray";
-    colorFour = "gray";
+    colorOne = "#F64A4A";
+    colorTwo = colorThree = colorFour = "grey";
   }
   if (strength === "WEAK") {
-    colorOne = "red";
-    colorTwo = "red";
-    colorThree = "gray";
-    colorFour = "gray";
+    colorOne = colorTwo = "#F64A4A";
+    colorThree = colorFour = "grey";
   }
   if (strength === "MEDIUM") {
-    colorOne = "yellow";
-    colorTwo = "yellow";
-    colorThree = "yellow";
+    colorOne = colorTwo = colorThree = "#F8CD65";
+
     colorFour = "gray";
   }
 
   if (strength === "HARD") {
-    colorOne = "green";
-    colorTwo = "green";
-    colorThree = "green";
-    colorFour = "green";
+    colorOne = colorTwo = colorThree = colorFour = "#a4ffaf";
   }
 
   // return colorOne;

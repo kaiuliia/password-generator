@@ -112,18 +112,18 @@ export const passwordReducer = (state = passwordState, action) => {
 export const changeColor = (state = passwordState) => {
   let strWord = "";
 
-  if (state.length > 12) {
+  if (state.length < 15) {
     strWord = "TO WEAK!";
   }
 
-  if (state.length > 15) {
+  if (state.length >= 15 && state.length < 20) {
     strWord = "WEAK";
   }
 
-  if (state.length > 25) {
+  if (state.length >= 20 && state.length < 30) {
     strWord = "MEDIUM";
   }
-  if (state.length > 50) {
+  if (state.length >= 30) {
     strWord = "HARD";
   }
 
