@@ -10,11 +10,30 @@ export const Strength = () => {
   let colorThree = "gray";
   let colorFour = "gray";
 
+  if (strength === "TO WEAK!") {
+    colorOne = "red";
+    colorTwo = "gray";
+    colorThree = "gray";
+    colorFour = "gray";
+  }
   if (strength === "WEAK") {
     colorOne = "red";
+    colorTwo = "red";
+    colorThree = "gray";
+    colorFour = "gray";
   }
   if (strength === "MEDIUM") {
+    colorOne = "yellow";
+    colorTwo = "yellow";
+    colorThree = "yellow";
+    colorFour = "gray";
+  }
+
+  if (strength === "HARD") {
     colorOne = "green";
+    colorTwo = "green";
+    colorThree = "green";
+    colorFour = "green";
   }
 
   // return colorOne;
@@ -29,14 +48,20 @@ export const Strength = () => {
         <div className="coloredContainers">
           <div
             className="colorBlock"
-            style={{ backgroundColor: "green" }}
+            style={{ backgroundColor: colorOne }}
           ></div>
           <div
             className="colorBlock"
-            style={{ backgroundColor: colorOne }}
+            style={{ backgroundColor: colorTwo }}
           ></div>
-          <div className="colorBlock" style={{ backgroundColor: "red" }}></div>
-          <div className="colorBlock" style={{ backgroundColor: "red" }}></div>
+          <div
+            className="colorBlock"
+            style={{ backgroundColor: colorThree }}
+          ></div>
+          <div
+            className="colorBlock"
+            style={{ backgroundColor: colorFour }}
+          ></div>
         </div>
       </div>
     </div>
