@@ -111,9 +111,23 @@ export const passwordReducer = (state = passwordState, action) => {
 
 export const changeColor = (state = passwordState) => {
   let strWord = "";
+  // if (
+  //   state.incLow === false &&
+  //   state.incUpper === false &&
+  //   state.incSymb === false &&
+  //   state.incNum === false
+  // ) {
+  //   alert("nothing to generate");
+  // }
 
-  if (state.length < 15) {
-    strWord = "TO WEAK!";
+  if (
+    state.length < 15 &&
+    (state.incLow === true ||
+      state.incUpper === true ||
+      state.incSymb === true ||
+      state.incNum === true)
+  ) {
+    strWord = "TOO WEAK!";
   }
 
   if (state.length >= 15 && state.length < 20) {

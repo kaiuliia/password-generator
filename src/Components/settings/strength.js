@@ -14,7 +14,7 @@ export const Strength = () => {
     colorOne = colorTwo = colorThree = colorFour = "grey";
   }
 
-  if (strength === "TO WEAK!") {
+  if (strength === "TOO WEAK!") {
     colorOne = "#F64A4A";
     colorTwo = colorThree = colorFour = "grey";
   }
