@@ -82,32 +82,35 @@ export const passwordReducer = (state = passwordState, action) => {
       return { ...state, password: newPassword };
 
     case "passw/lowCaseChecked":
+      const lowNumber = changeColor(state);
       if (state.incLow === false) {
-        return { ...state, incLow: true };
+        return { ...state, incLow: true, strength: lowNumber };
       } else {
-        return { ...state, incLow: false };
+        return { ...state, incLow: false, strength: lowNumber };
       }
 
     case "passw/numCaseChecked":
+      const numNumber = changeColor(state);
       if (state.incNum === false) {
-        return { ...state, incNum: true };
+        return { ...state, incNum: true, strength: numNumber };
       } else {
-        return { ...state, incNum: false };
+        return { ...state, incNum: false, strength: numNumber };
       }
 
     case "passw/upCaseChecked":
+      const upNumber = changeColor(state);
       if (state.incUpper === false) {
-        return { ...state, incUpper: true };
+        return { ...state, incUpper: true, strength: upNumber };
       } else {
-        return { ...state, incUpper: false };
+        return { ...state, incUpper: false, strength: upNumber };
       }
 
     case "passw/symbolCaseChecked":
-      const stNumbe = changeColor(state);
+      const symNumber = changeColor(state);
       if (state.incSymb === false) {
-        return { ...state, incSymb: true, strength: stNumbe };
+        return { ...state, incSymb: true, strength: symNumber };
       } else {
-        return { ...state, incSymb: false, strength: stNumbe };
+        return { ...state, incSymb: false, strength: symNumber };
       }
 
     case "passw/changeLength":
@@ -122,8 +125,9 @@ export const passwordReducer = (state = passwordState, action) => {
 export const changeColor = (state = passwordState) => {
   let strWord = "";
   const propertyValues = Object.values(state);
+  let trueFlags = propertyValues.filter((el) => el === true).length;
 
-  console.log(propertyValues);
+  console.log(trueFlags);
 
   if (state.length < 15) {
     strWord = "TOO WEAK!";
