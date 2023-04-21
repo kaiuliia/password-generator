@@ -156,18 +156,26 @@ export const changeColor = (state = passwordState) => {
 
   console.log(trueFlags);
 
+  if (trueFlags === 0) {
+    strWord = "TOO WEAK!";
+  }
+
   if (trueFlags === 1) {
     strWord = "TOO WEAK!";
   }
 
-  if (state.length >= 15 && state.length < 20) {
+  if (trueFlags === 2) {
     strWord = "WEAK";
   }
 
-  if (state.length >= 20 && state.length < 30) {
+  if (trueFlags === 3) {
     strWord = "MEDIUM";
   }
-  if (state.length >= 30) {
+
+  if (trueFlags === 4) {
+    strWord = "MEDIUM";
+  }
+  if (trueFlags === 5) {
     strWord = "HARD";
   }
 
