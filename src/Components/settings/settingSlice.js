@@ -8,7 +8,7 @@ const passwordState = {
   incNum: false,
   length: 10,
 
-  strength: "",
+  strength: "TOO WEAK!",
 };
 
 const keys = {
@@ -125,13 +125,7 @@ export const changeColor = (state = passwordState) => {
 
   console.log(propertyValues);
 
-  if (
-    state.length < 15 &&
-    (state.incLow === true ||
-      state.incUpper === true ||
-      state.incSymb === true ||
-      state.incNum === true)
-  ) {
+  if (state.length < 15) {
     strWord = "TOO WEAK!";
   }
 
