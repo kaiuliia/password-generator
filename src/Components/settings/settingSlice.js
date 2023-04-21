@@ -124,9 +124,8 @@ export const passwordReducer = (state = passwordState, action) => {
       let newState1;
 
       if (state.incSymb === false) {
-        newState1 = { ...state, incSymb: true, strength: changeColor(state) };
-        changeColor(newState1);
-        return newState1;
+        newState1 = { ...state, incSymb: true };
+        return { ...newState1, strength: changeColor(newState1) };
       } else {
         newState1 = { ...state, incSymb: false, strength: changeColor(state) };
         changeColor(newState1);
