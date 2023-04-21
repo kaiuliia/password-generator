@@ -10,9 +10,9 @@ export const Strength = () => {
     colorThree,
     colorFour = "gray";
 
-  if (strength === "") {
-    colorOne = colorTwo = colorThree = colorFour = "grey";
-  }
+  // if (strength === "") {
+  //   colorOne = colorTwo = colorThree = colorFour = "grey";
+  // }
 
   if (strength === "TOO WEAK!") {
     colorOne = "#F64A4A";

@@ -31,6 +31,15 @@ const createPassword = (
   let newPass = [];
   let finalPass = [];
 
+  if (
+    incLow === false &&
+    incUpper === false &&
+    incSymb === false &&
+    incNum === false
+  ) {
+    alert("nothing to generate");
+    return;
+  }
   while (newPass.length < length) {
     if (incLow === true) {
       newPass.push(
@@ -94,10 +103,11 @@ export const passwordReducer = (state = passwordState, action) => {
       }
 
     case "passw/symbolCaseChecked":
+      const stNumbe = changeColor(state);
       if (state.incSymb === false) {
-        return { ...state, incSymb: true };
+        return { ...state, incSymb: true, strength: stNumbe };
       } else {
-        return { ...state, incSymb: false };
+        return { ...state, incSymb: false, strength: stNumbe };
       }
 
     case "passw/changeLength":
@@ -111,14 +121,9 @@ export const passwordReducer = (state = passwordState, action) => {
 
 export const changeColor = (state = passwordState) => {
   let strWord = "";
-  // if (
-  //   state.incLow === false &&
-  //   state.incUpper === false &&
-  //   state.incSymb === false &&
-  //   state.incNum === false
-  // ) {
-  //   alert("nothing to generate");
-  // }
+  const propertyValues = Object.values(state);
+
+  console.log(propertyValues);
 
   if (
     state.length < 15 &&
