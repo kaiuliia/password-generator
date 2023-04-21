@@ -82,35 +82,55 @@ export const passwordReducer = (state = passwordState, action) => {
       return { ...state, password: newPassword };
 
     case "passw/lowCaseChecked":
-      const lowNumber = changeColor(state);
+      let newState4;
+
       if (state.incLow === false) {
-        return { ...state, incLow: true, strength: lowNumber };
+        newState4 = { ...state, incLow: true, strength: changeColor(state) };
+        changeColor(newState4);
+        return newState4;
       } else {
-        return { ...state, incLow: false, strength: lowNumber };
+        newState4 = { ...state, incLow: false, strength: changeColor(state) };
+        changeColor(newState4);
+        return newState4;
       }
 
     case "passw/numCaseChecked":
-      const numNumber = changeColor(state);
+      let newState3;
+
       if (state.incNum === false) {
-        return { ...state, incNum: true, strength: numNumber };
+        newState3 = { ...state, incNum: true, strength: changeColor(state) };
+        changeColor(newState3);
+        return newState3;
       } else {
-        return { ...state, incNum: false, strength: numNumber };
+        newState3 = { ...state, incNum: false, strength: changeColor(state) };
+        changeColor(newState3);
+        return newState3;
       }
 
     case "passw/upCaseChecked":
-      const upNumber = changeColor(state);
+      let newState2;
+
       if (state.incUpper === false) {
-        return { ...state, incUpper: true, strength: upNumber };
+        newState2 = { ...state, incUpper: true, strength: changeColor(state) };
+        changeColor(newState2);
+        return newState2;
       } else {
-        return { ...state, incUpper: false, strength: upNumber };
+        newState2 = { ...state, incUpper: false, strength: changeColor(state) };
+        changeColor(newState2);
+        return newState2;
       }
 
     case "passw/symbolCaseChecked":
-      const symNumber = changeColor(state);
+      let newState1;
+
       if (state.incSymb === false) {
-        return { ...state, incSymb: true, strength: symNumber };
+        newState1 = { ...state, incSymb: true, strength: changeColor(state) };
+        changeColor(newState1);
+        return newState1;
       } else {
-        return { ...state, incSymb: false, strength: symNumber };
+        newState1 = { ...state, incSymb: false, strength: changeColor(state) };
+        changeColor(newState1);
+        return newState1;
       }
 
     case "passw/changeLength":
