@@ -152,11 +152,11 @@ export const passwordReducer = (state = passwordState, action) => {
 export const changeColor = (state = passwordState) => {
   let strWord = "";
   const propertyValues = Object.values(state);
-  let trueFlags = propertyValues.filter((el) => el === true).length;
+  let trueFlags = propertyValues.filter((el) => el === true || el > 20).length;
 
   console.log(trueFlags);
 
-  if (state.length < 15) {
+  if (trueFlags === 1) {
     strWord = "TOO WEAK!";
   }
 
