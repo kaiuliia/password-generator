@@ -114,9 +114,16 @@ export const passwordReducer = (state = passwordState, action) => {
       }
 
     case "passw/changeLength":
-      const stNumber = changeColor(state);
-      // const stNumber = action.payload > 15 ? "MEDIUM" : "LOW";
-      return { ...state, length: action.payload, strength: stNumber };
+      // const stNumber = changeColor(state);
+
+      // return { ...state, length: action.payload, strength: stNumber };
+      const newState = {
+        ...state,
+        length: action.payload,
+        strength: changeColor(state),
+      };
+      changeColor(newState);
+      return newState;
   }
 
   return state;

@@ -32,7 +32,7 @@ export const Checkbox = () => {
 
   return (
     <div className="checkboxContainer">
-      <label class="container">
+      <label className="container">
         <input
           type="checkbox"
           onChange={checkUppHandlier}
