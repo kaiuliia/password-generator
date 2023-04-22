@@ -9,6 +9,7 @@ const passwordState = {
   length: 10,
 
   strength: "TOO WEAK!",
+  copied: false,
 };
 
 const keys = {
@@ -128,11 +129,7 @@ export const passwordReducer = (state = passwordState, action) => {
         changeColor(newState1);
         return newState1;
       }
-
     case "passw/changeLength":
-      // const stNumber = changeColor(state);
-
-      // return { ...state, length: action.payload, strength: stNumber };
       const newState = {
         ...state,
         length: action.payload,
@@ -140,9 +137,17 @@ export const passwordReducer = (state = passwordState, action) => {
       };
       changeColor(newState);
       return newState;
+
+    case "passw/passwordCopied":
+      copy(state);
+      return { ...state, copied: true };
   }
 
   return state;
+};
+
+const copy = (state) => {
+  navigator.clipboard.writeText(state.password.join(""));
 };
 
 export const changeColor = (state = passwordState) => {
@@ -217,5 +222,11 @@ export const symbolCaseChecked = (checked) => {
   return {
     type: "passw/symbolCaseChecked",
     payload: checked,
+  };
+};
+
+export const passwordCopied = () => {
+  return {
+    type: "passw/passwordCopied",
   };
 };
