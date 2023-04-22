@@ -85,9 +85,8 @@ export const passwordReducer = (state = passwordState, action) => {
       let newState4;
 
       if (state.incLow === false) {
-        newState4 = { ...state, incLow: true, strength: changeColor(state) };
-        changeColor(newState4);
-        return newState4;
+        newState4 = { ...state, incLow: true };
+        return { ...newState4, strength: changeColor(newState4) };
       } else {
         newState4 = { ...state, incLow: false, strength: changeColor(state) };
         changeColor(newState4);
@@ -98,9 +97,8 @@ export const passwordReducer = (state = passwordState, action) => {
       let newState3;
 
       if (state.incNum === false) {
-        newState3 = { ...state, incNum: true, strength: changeColor(state) };
-        changeColor(newState3);
-        return newState3;
+        newState3 = { ...state, incNum: true };
+        return { ...newState3, strength: changeColor(newState3) };
       } else {
         newState3 = { ...state, incNum: false, strength: changeColor(state) };
         changeColor(newState3);
@@ -111,9 +109,8 @@ export const passwordReducer = (state = passwordState, action) => {
       let newState2;
 
       if (state.incUpper === false) {
-        newState2 = { ...state, incUpper: true, strength: changeColor(state) };
-        changeColor(newState2);
-        return newState2;
+        newState2 = { ...state, incUpper: true };
+        return { ...newState2, strength: changeColor(newState2) };
       } else {
         newState2 = { ...state, incUpper: false, strength: changeColor(state) };
         changeColor(newState2);
