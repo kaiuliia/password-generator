@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const passwordState = {
-  password: "default",
+  password: "",
   incUpper: false,
   incLow: false,
   incSymb: false,
