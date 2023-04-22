@@ -6,6 +6,8 @@ Choose password length, symbols you want to use and generate your password.
 Strength scale will show you how strong is your password.
 You can copy it to the clipboard and use whenever you'd like.
 
+You can find it here:
+https://password.rusanova.eu/
 
 ## Available Scripts
 
