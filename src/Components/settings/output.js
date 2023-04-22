@@ -7,6 +7,7 @@ export const Output = ({ text }) => {
   const password = useSelector((state) => {
     return state.passw.password;
   });
+  const passwordCopy = password.toString();
   return (
     <div className="Output">
       <div className="left">
@@ -14,7 +15,12 @@ export const Output = ({ text }) => {
       </div>
       <div className="right">
         <p className="copiedWord">COPIED</p>
-        <img src={logo} />
+        <img
+          src={logo}
+          onClick={() => {
+            navigator.clipboard.writeText(password.join(""));
+          }}
+        />
       </div>
     </div>
   );
