@@ -176,7 +176,7 @@ export const passwordReducer = (state = passwordState, action) => {
       return newState;
 
     case "passw/passwordCopied":
-      if (state.password.length === 0) {
+      if (state.password === "") {
         return { ...state, copied: false };
       } else {
         copy(state);
