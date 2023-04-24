@@ -87,9 +87,18 @@ export const passwordReducer = (state = passwordState, action) => {
 
       if (state.incLow === false) {
         newState4 = { ...state, incLow: true };
-        return { ...newState4, strength: changeColor(newState4) };
+        return {
+          ...newState4,
+          strength: changeColor(newState4),
+          copied: false,
+        };
       } else {
-        newState4 = { ...state, incLow: false, strength: changeColor(state) };
+        newState4 = {
+          ...state,
+          incLow: false,
+          strength: changeColor(state),
+          copied: false,
+        };
         changeColor(newState4);
         return newState4;
       }
@@ -99,9 +108,18 @@ export const passwordReducer = (state = passwordState, action) => {
 
       if (state.incNum === false) {
         newState3 = { ...state, incNum: true };
-        return { ...newState3, strength: changeColor(newState3) };
+        return {
+          ...newState3,
+          strength: changeColor(newState3),
+          copied: false,
+        };
       } else {
-        newState3 = { ...state, incNum: false, strength: changeColor(state) };
+        newState3 = {
+          ...state,
+          incNum: false,
+          strength: changeColor(state),
+          copied: false,
+        };
         changeColor(newState3);
         return newState3;
       }
@@ -111,9 +129,18 @@ export const passwordReducer = (state = passwordState, action) => {
 
       if (state.incUpper === false) {
         newState2 = { ...state, incUpper: true };
-        return { ...newState2, strength: changeColor(newState2) };
+        return {
+          ...newState2,
+          strength: changeColor(newState2),
+          copied: false,
+        };
       } else {
-        newState2 = { ...state, incUpper: false, strength: changeColor(state) };
+        newState2 = {
+          ...state,
+          incUpper: false,
+          strength: changeColor(state),
+          copied: false,
+        };
         changeColor(newState2);
         return newState2;
       }
@@ -123,9 +150,18 @@ export const passwordReducer = (state = passwordState, action) => {
 
       if (state.incSymb === false) {
         newState1 = { ...state, incSymb: true };
-        return { ...newState1, strength: changeColor(newState1) };
+        return {
+          ...newState1,
+          strength: changeColor(newState1),
+          copied: false,
+        };
       } else {
-        newState1 = { ...state, incSymb: false, strength: changeColor(state) };
+        newState1 = {
+          ...state,
+          incSymb: false,
+          strength: changeColor(state),
+          copied: false,
+        };
         changeColor(newState1);
         return newState1;
       }
@@ -133,6 +169,7 @@ export const passwordReducer = (state = passwordState, action) => {
       const newState = {
         ...state,
         length: action.payload,
+        copied: false,
         strength: changeColor(state),
       };
       changeColor(newState);
