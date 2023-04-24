@@ -4,7 +4,7 @@ import { Strength } from "./strength";
 import { Checkbox } from "./checkbox";
 import "../../App.css";
 import { SliderBar } from "./sliderBar";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { generatePassword } from "./settingSlice";
 
 export const Settings = () => {
