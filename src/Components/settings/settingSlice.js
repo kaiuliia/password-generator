@@ -38,7 +38,7 @@ const createPassword = (
     incSymb === false &&
     incNum === false
   ) {
-    alert("nothing to generate");
+    alert("please, choose at least one option for you password");
     return;
   }
   while (newPass.length < length) {

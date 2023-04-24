@@ -21,10 +21,6 @@ export const Output = ({ text }) => {
     dispatch(passwordCopied());
   };
 
-  // const copy = () => {
-  //   navigator.clipboard.writeText(password.join(""));
-  // };
-
   return (
     <div className="Output">
       <div className="left">
