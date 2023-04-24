@@ -176,14 +176,21 @@ export const passwordReducer = (state = passwordState, action) => {
       return newState;
 
     case "passw/passwordCopied":
-      copy(state);
-      return { ...state, copied: true };
+      if (state.password.length === 0) {
+        return { ...state, copied: false };
+      } else {
+        copy(state);
+        return { ...state, copied: true };
+      }
   }
 
   return state;
 };
 
 const copy = (state) => {
+  // if (state.password === "") {
+  //
+  // } else {
   navigator.clipboard.writeText(state.password.join(""));
 };
 
